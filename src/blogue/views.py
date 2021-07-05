@@ -1,6 +1,9 @@
-from django.http import HttpResponse
+
 
 
 # Create your views here.
+from django.shortcuts import render
+
+
 def index(request):
-    return HttpResponse("<h1>oui<h1>")
+    return render(request, "blogue/index.html")
