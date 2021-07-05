@@ -15,11 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+from blogue.views import index as blog_index
 from .views  import index
 
 urlpatterns = [
     path('', index, name="index"),
-    path('blog/', include("blogue.urls")), #lier les urls
+    path('blog/', blog_index), #lier les urls
     path('admin/', admin.site.urls),
 ]
